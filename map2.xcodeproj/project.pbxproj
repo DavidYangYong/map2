@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6308D5BA210030C1006D0813 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6308D5B9210030C1006D0813 /* .gitignore */; };
+		637C9CC12100BABB00B419FF /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 637C9CBF2100BABB00B419FF /* libssl.a */; };
+		637C9CC22100BABB00B419FF /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 637C9CC02100BABB00B419FF /* libcrypto.a */; };
+		637C9CC62101630F00B419FF /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637C9CC52101630F00B419FF /* ExternalAccessory.framework */; };
+		6384607D21018D8600594E6F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6384607C21018D8600594E6F /* CoreLocation.framework */; };
+		63846080210192FD00594E6F /* LAXLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6384607F210192FD00594E6F /* LAXLocationManager.swift */; };
 		63998C241E6FEE4400FF942B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63998C231E6FEE4400FF942B /* AppDelegate.swift */; };
 		63998C261E6FEE4400FF942B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63998C251E6FEE4400FF942B /* ViewController.swift */; };
 		63998C291E6FEE4400FF942B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63998C271E6FEE4400FF942B /* Main.storyboard */; };
@@ -40,6 +45,12 @@
 		23D4889B7F75D9FAAA3B0F18 /* Pods_map2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_map2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		630240632100804500BB5764 /* BMKSwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BMKSwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		6308D5B9210030C1006D0813 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		637C9CBF2100BABB00B419FF /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = Pods/BaiduMapKit/BaiduMapKit/thirdlibs/libssl.a; sourceTree = "<group>"; };
+		637C9CC02100BABB00B419FF /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = Pods/BaiduMapKit/BaiduMapKit/thirdlibs/libcrypto.a; sourceTree = "<group>"; };
+		637C9CC52101630F00B419FF /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		637C9CC72101630F00B419FF /* map2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = map2.entitlements; sourceTree = "<group>"; };
+		6384607C21018D8600594E6F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6384607F210192FD00594E6F /* LAXLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAXLocationManager.swift; sourceTree = "<group>"; };
 		63998C201E6FEE4400FF942B /* map2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = map2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63998C231E6FEE4400FF942B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63998C251E6FEE4400FF942B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6384607D21018D8600594E6F /* CoreLocation.framework in Frameworks */,
+				637C9CC12100BABB00B419FF /* libssl.a in Frameworks */,
+				637C9CC22100BABB00B419FF /* libcrypto.a in Frameworks */,
+				637C9CC62101630F00B419FF /* ExternalAccessory.framework in Frameworks */,
 				D231FE2C5D27DCDDF39EFA5C /* Pods_map2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,9 +102,21 @@
 		10356E86C7B6F943CE6E0821 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6384607C21018D8600594E6F /* CoreLocation.framework */,
+				637C9CC52101630F00B419FF /* ExternalAccessory.framework */,
+				637C9CC02100BABB00B419FF /* libcrypto.a */,
+				637C9CBF2100BABB00B419FF /* libssl.a */,
 				23D4889B7F75D9FAAA3B0F18 /* Pods_map2.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6384607E2101911200594E6F /* core */ = {
+			isa = PBXGroup;
+			children = (
+				6384607F210192FD00594E6F /* LAXLocationManager.swift */,
+			);
+			path = core;
 			sourceTree = "<group>";
 		};
 		63998C171E6FEE4400FF942B = {
@@ -118,6 +145,8 @@
 		63998C221E6FEE4400FF942B /* map2 */ = {
 			isa = PBXGroup;
 			children = (
+				6384607E2101911200594E6F /* core */,
+				637C9CC72101630F00B419FF /* map2.entitlements */,
 				63998C231E6FEE4400FF942B /* AppDelegate.swift */,
 				63998C251E6FEE4400FF942B /* ViewController.swift */,
 				63998C271E6FEE4400FF942B /* Main.storyboard */,
@@ -231,6 +260,14 @@
 						DevelopmentTeam = PG9MNKPBLQ;
 						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
 					};
 					63998C361E6FEE4400FF942B = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -358,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63846080210192FD00594E6F /* LAXLocationManager.swift in Sources */,
 				63998C261E6FEE4400FF942B /* ViewController.swift in Sources */,
 				63998C2C1E6FEE4400FF942B /* map2.xcdatamodeld in Sources */,
 				63998C241E6FEE4400FF942B /* AppDelegate.swift in Sources */,
@@ -469,6 +507,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -518,6 +557,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -527,9 +567,14 @@
 			baseConfigurationReference = 9133539E8B7131030CA29A1F /* Pods-map2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = map2/map2.entitlements;
 				DEVELOPMENT_TEAM = PG9MNKPBLQ;
 				INFOPLIST_FILE = map2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/BaiduMapKit/BaiduMapKit/thirdlibs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = david.map2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "map2/BMKSwiftDemo-Bridging-Header.h";
@@ -543,9 +588,14 @@
 			baseConfigurationReference = 8F3FEBF24A3F16CAAEA91B4E /* Pods-map2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = map2/map2.entitlements;
 				DEVELOPMENT_TEAM = PG9MNKPBLQ;
 				INFOPLIST_FILE = map2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/BaiduMapKit/BaiduMapKit/thirdlibs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = david.map2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "map2/BMKSwiftDemo-Bridging-Header.h";

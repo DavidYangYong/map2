@@ -8,9 +8,9 @@
 
 import UIKit
 import CoreData
-
+import CoreLocation
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate{
 
     var window: UIWindow?
 
@@ -22,10 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         _mapManager = BMKMapManager()
         // 如果要关注网络及授权验证事件，请设定generalDelegate参数
-        let ret = _mapManager?.start(mapKey, generalDelegate: self as! BMKGeneralDelegate)
+        let ret = _mapManager?.start(mapKey, generalDelegate: self)
         if ret == false {
             NSLog("manager start failed!")
         }
+       // setenv("CFNETWORK_DIAGNOSTICS", "1", 1);
+        //开启定位
+      //  loadLocation()
         return true
     }
 
@@ -97,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-   
-
+    
 }
+
 
