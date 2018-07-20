@@ -19,13 +19,6 @@ var mapView: BMKMapView?
         mapView?.addSubview(btnOp)
         self.view.addSubview(mapView!)
         // Do any additional setup after loading the view, typically from a nib.
-        //设置起始中心点
-        let center = CLLocationCoordinate2D(latitude: 31.272881101147327, longitude: 121.61539365113157)
-        mapView?.centerCoordinate = center
-        //设置区域
-        let span = BMKCoordinateSpanMake(0.011929035022411938, 0.0078062748817018246)
-        let region = BMKCoordinateRegionMake(center, span)
-        mapView?.setRegion(region, animated: true)
 
     }
 
@@ -38,21 +31,36 @@ var mapView: BMKMapView?
     @IBOutlet weak var label: UILabel!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-      //  mapView?.viewWillAppear()
-      //  mapView?.delegate = self as! BMKMapViewDelegate // 此处记得不用的时候需要置nil，否则影响内存的释放
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        //地图中心点坐标
+        let center = CLLocationCoordinate2D(latitude: 31.245087, longitude: 121.506656)
+        //设置地图的显示范围（越小越精确）
+        let span = BMKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        //设置地图最终显示区域
+        let region = BMKCoordinateRegion(center: center, span: span)
+        mapView?.region = region
+        
+        // 添加一个标记点(PointAnnotation）
+        let annotation =  BMKPointAnnotation()
+        var coor = CLLocationCoordinate2D()
+        coor.latitude = 31.254087
+        coor.longitude = 121.512656
+        annotation.coordinate = coor
+        annotation.title = "这里有只野生皮卡丘"
+        mapView!.addAnnotation(annotation)
     }
     @IBAction func btnShow(_ sender: UIButton, forEvent event: UIEvent) {
         manager.getLocation(success: { (str) in
             self.label.text = str
         }) { (err) in
+            
             self.label.text = err
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-     //   mapView?.viewWillDisappear()
-       // mapView?.delegate = nil // 不用时，置nil
     }  
 }
 
