@@ -27,8 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate{
             NSLog("manager start failed!")
         }
        // setenv("CFNETWORK_DIAGNOSTICS", "1", 1);
-        //开启定位
-      //  loadLocation()
         return true
     }
 

@@ -21,6 +21,7 @@
 		63998C311E6FEE4400FF942B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63998C2F1E6FEE4400FF942B /* LaunchScreen.storyboard */; };
 		63998C3C1E6FEE4400FF942B /* map2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63998C3B1E6FEE4400FF942B /* map2Tests.swift */; };
 		63998C471E6FEE4400FF942B /* map2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63998C461E6FEE4400FF942B /* map2UITests.swift */; };
+		63F19BAA210581C9009D0916 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F19BA9210581C9009D0916 /* LocationManager.swift */; };
 		D231FE2C5D27DCDDF39EFA5C /* Pods_map2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D4889B7F75D9FAAA3B0F18 /* Pods_map2.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		63998C421E6FEE4400FF942B /* map2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = map2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63998C461E6FEE4400FF942B /* map2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map2UITests.swift; sourceTree = "<group>"; };
 		63998C481E6FEE4400FF942B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63F19BA9210581C9009D0916 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		8F3FEBF24A3F16CAAEA91B4E /* Pods-map2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-map2.release.xcconfig"; path = "Pods/Target Support Files/Pods-map2/Pods-map2.release.xcconfig"; sourceTree = "<group>"; };
 		9133539E8B7131030CA29A1F /* Pods-map2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-map2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-map2/Pods-map2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				6384607F210192FD00594E6F /* LAXLocationManager.swift */,
+				63F19BA9210581C9009D0916 /* LocationManager.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			files = (
 				63846080210192FD00594E6F /* LAXLocationManager.swift in Sources */,
 				63998C261E6FEE4400FF942B /* ViewController.swift in Sources */,
+				63F19BAA210581C9009D0916 /* LocationManager.swift in Sources */,
 				63998C2C1E6FEE4400FF942B /* map2.xcdatamodeld in Sources */,
 				63998C241E6FEE4400FF942B /* AppDelegate.swift in Sources */,
 			);

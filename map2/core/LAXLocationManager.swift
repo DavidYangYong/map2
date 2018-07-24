@@ -45,11 +45,13 @@ func getLocation(success: @escaping (_ address: String) -> Void, failed: @escapi
             print(long)
             print(lati)
             
-            let geocoder = CLGeocoder.init()
-            geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+            let geocoder = CLGeocoder()
+            let currentLocation = CLLocation(latitude: lati, longitude: long)
+            geocoder.reverseGeocodeLocation(currentLocation) { (placemarks, error) in
                 
                 if let name = placemarks?.first?.name {
-                    self.successBlock?(name)
+                    let address:String=name+(NSString(format: "%f" , long) as String)+":"+(NSString(format: "%f" , lati) as String)
+                    self.successBlock?(address)
                 } else {
                     self.failBlock?("抱歉，获取不到您的位置")
                 }
