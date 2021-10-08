@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate{
     
     let mapKey:String="aEUmnBPZxWBRpZkebQ03WwHN"
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         _mapManager = BMKMapManager()
         // 如果要关注网络及授权验证事件，请设定generalDelegate参数
