@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         //地图中心点坐标
         let center = CLLocationCoordinate2D(latitude: 31.245087, longitude: 121.506656)
-        //设置地图的显示范围（越小越精确）
+        //设置地图的显示范围（越小越精确）test
         let span = BMKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         //设置地图最终显示区域
         let region = BMKCoordinateRegion(center: center, span: span)

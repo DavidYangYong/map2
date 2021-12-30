@@ -1,0 +1,31 @@
+PODS:
+  - BaiduMapKit (6.4.0):
+    - BaiduMapKit/Base (= 6.4.0)
+    - BaiduMapKit/Map (= 6.4.0)
+    - BaiduMapKit/Search (= 6.4.0)
+    - BaiduMapKit/Utils (= 6.4.0)
+  - BaiduMapKit/Base (6.4.0)
+  - BaiduMapKit/Map (6.4.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Search (6.4.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Utils (6.4.0):
+    - BaiduMapKit/Base
+  - SnapKit (4.0.1)
+
+DEPENDENCIES:
+  - BaiduMapKit
+  - SnapKit (~> 4.0.0)
+
+SPEC REPOS:
+  https://gitee.com/mirrors/CocoaPods-Specs.git:
+    - BaiduMapKit
+    - SnapKit
+
+SPEC CHECKSUMS:
+  BaiduMapKit: e6b88411085c2f2c4346c8d3bdb2f05f21064790
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+
+PODFILE CHECKSUM: 07916313869afa459c47b57269df97918d659312
+
+COCOAPODS: 1.11.2
