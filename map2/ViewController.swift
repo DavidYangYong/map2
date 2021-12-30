@@ -61,13 +61,13 @@ class ViewController: UIViewController {
             
             self.label.text = err
         }
-        //  reverseGeocode()
-        //        LocationManager.shareManager.creatLocationManager().startLocation { (location, adress, error) in
-        //            print("经度 \(location?.coordinate.longitude ?? 0.0)")
-        //            print("纬度 \(location?.coordinate.latitude ?? 0.0)")
-        //            print("地址\(adress ?? "")")
-        //            print("error\(error ?? "没有错误")")
-        //        }
+          reverseGeocode()
+                LocationManager.shareManager.creatLocationManager().startLocation { (location, adress, error) in
+                    print("经度 \(location?.coordinate.longitude ?? 0.0)")
+                    print("纬度 \(location?.coordinate.latitude ?? 0.0)")
+                    print("地址\(adress ?? "")")
+                    print("error\(error ?? "没有错误")")
+                }
     }
     
     //地理信息反编码
